@@ -1,0 +1,47 @@
+<div class="terms">
+    <div class="heading">
+        <svg width="69" height="77" viewBox="0 0 69 77" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <rect width="69" height="77" fill="url(#pattern0_1_3531)"/>
+            <defs>
+            <pattern id="pattern0_1_3531" patternContentUnits="objectBoundingBox" width="1" height="1">
+            <use xlink:href="#image0_1_3531" transform="matrix(0.0111111 0 0 0.00995671 0 0.0519481)"/>
+            </pattern>
+            <image id="image0_1_3531" width="90" height="90" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAAAXNSR0IArs4c6QAAA81JREFUeF7t3c1q1FAUB/BzbulkUMGttL6BojtFVPQBBDeuCm51peJqmvkwjDSZsSstrtwqPkFF8AHEiouCr+DHfkZk0o9cCbai0HHuvae9H8mZbc8/9+aXSyY9CRME/lgRQCuj8CDA0JYWAUMztCUBS8Pwig4JOkmSZqPRuAsAS4h4BgCOW5r/QcNsIeInIcTDVqv10eE8/hmavKKTJDkdRdEbADjny07tzWOCiDfjOH7nw7xI0OVKjqJow0PkfVtvsEnQaZo+QMSnPqyY/8zBC2wq9AYiXvAcupyec2wq9BgRT3gE/RMAjk2Zj1NsEnSWZdIjZBBCXN3d3X077eBLKfOiKG71er112/OuFHS73cbhcHjFR+zKQZcr1UfsSkL7iF1ZaN+wKw3tE3bloX3BrgW0D9i1gXaNXStol9i1g3aFXUtoF9i1hbaNXWtom9i1hy6xB4PBdSlleTtuaot1bm7uGuUeZKWg8zxf7Pf730xaoLOwEfF9HMeXTbZdZioFjYjLcRw/McWYgb3Vbrcj021XChoAykcNHk0mk5dHsbLLfjdDmwpo5BhaA4tSytAUPY0sQ2tgUUoZmqKnkWVoDSxKKUNT9DSyDK2BRSllaIqeRpahNbAopQxN0dPIMrQGFqWUoSl6GlmG1sCilDI0RU8jGxL0FgD08jx/Zdov1nA5sDRJkoVms3lbSvkYABo62wsGmnoHRAdlVu1gMGhJKYez6v7+ezDQUsqFTqfzXWfnjqp2dXX11M7OjtZcgoGm3Dw9bPCVlZVFIcQXne0GA+3TqSPLsuXySYNKQh/GzVMdmINqa/FlSEVynQ/m1OEaijo+Q1MFFfMMrQhFLWNoqqBinqEVoahlIUFb63VQLuOmHZBgoF38w2LS0wge2kWvw6SnETy0i16HSU8jeGgXpw6Tnkbw0DZ7HbX+MqReXrnOB3PV4RqKOj5DUwUV8wytCEUtY2iqoGKeoRWhqGUMTRVUzDO0IhS1jKGpgop5hlaEopYxNFVQMc/QilDUMoamCirmGVoRilrG0FRBxbwz6DRNffvpeUUy/TIp5ajT6ZzUT/5OGP+iShlO0zSUlymY+vzJIeKHOI4vmW6IBJ1l2X0AeGY6eEi5oijudbvd56ZzJkGvra1Fo9FoQwhx3nQCgeQ28zy/2O/3y+dSjD4k6HLE8hVO8/Pz6xXG3iyK4ka32/1qJLwXIkOX2ylX9ng8viOEWCqK4qxn72bR9pFS/gCAz1LK19vb2y8oK3l/8EOB1t6TGgYY2tJBZ2iGtiRgaRhe0QxtScDSML8ACK7debBea4AAAAAASUVORK5CYII="/>
+            </defs>
+            </svg>
+        <h2>
+            Accept A Terms & 
+    Review Privacy Notice
+        </h2>    
+    </div>
+      
+
+    <div class="conditions-text">
+        <p>By selecting "I Agree" below, I have reviewed and 
+            agree to the <a href="">Terms of Use</a>  and acknoweledge 
+            the <a href="">Pricacy Notice.</a>  I am at least 18 years of age.</p>
+    </div>
+
+    <div class="terms-and-buttons">
+        <div class="term-content">
+            <label for="checkbox">I Agree</label>
+            <input type="checkbox" id="checkbox" name="checkbox" name="checkbox" [(ngModel)]="isCheckboxChecked">
+        </div>
+        <div class="next-prevoius-buttons">
+            <a href="" class="previous-button" [routerLink]="['/login']">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.50001 10.8333L1.41667 6.00001L5.5 1.16667" stroke="#151515"/>
+                  <path d="M3.30597 6L11.4726 6" stroke="#151515"/>
+                  </svg>
+              </a>
+            
+                <button class="next-button" [disabled]="!isCheckboxChecked" [routerLink]="['/payment-methods']">Next <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.5361 0.333426L13.9166 6.03447L8.46394 11.6665" stroke="#696565"/>
+                    <path d="M11.4104 6.01852L0.577288 5.94955" stroke="#696565"/>
+                    </svg>
+                    
+                  </button>
+        </div>
+    </div>
+   
+</div>

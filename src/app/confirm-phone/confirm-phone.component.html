@@ -1,0 +1,61 @@
+<div class="phone-number">
+    <h4>Confirm your information</h4>
+    <div class="name-surname">
+        <input type="text" class="name" placeholder="Name">
+        <input type="text" class="surname" placeholder="Surname">
+    </div>
+    <div class="phone-number-content">
+      <ng-select [items]="states" bindLabel="name" bindValue="phoneCode" [clearable]="false" placeholder="Select Prefix"
+        [(ngModel)]="selectedState" 
+        [virtualScroll]="true" (change)="onSelectState($event,selectedState)">
+  
+        <!-- Custom label template -->
+        <ng-template ng-label-tmp let-item="item">
+          <div class="label-container">
+            <img [src]="item.image" alt="{{ item.name }} Flag" width="30" height="auto" class="flag-image">
+          </div>
+        </ng-template>
+  
+        <!-- Custom option template -->
+        <ng-template ng-option-tmp let-item="item">
+          <div class="option-container">
+            <img [src]="item.image" alt="{{ item.name }} Flag" width="30" height="auto" class="flag-image">
+  
+            <div class="phone-code">{{ item.phoneCode }}</div>
+          </div>
+        </ng-template>
+      </ng-select>
+      <!-- Combined phone number input with validation -->
+      <!-- Display selected state -->
+      <div class="selected-state-container">
+        <!-- <div style="margin-top: 10px;">
+    {{ selectedState.name }}
+    </div> -->
+  
+        <!-- Inputs for phone code and phone number -->
+        <div class="phone-inputs-container">
+  
+  
+  
+  
+          <div class="phone-number-input">
+            <input type="text" id="phoneCode" name="phoneCode" [value]="selectedState" readonly placeholder="+383">
+            <input type="number" id="phoneNumber" name="phoneNumber" [(ngModel)]="phoneNumber" pattern="[0-9]{10}" required placeholder="Mobile Number">
+            <!-- <div *ngIf="phoneNumber && phoneNumber.length < 10" class="text-danger">Please enter a valid 10-digit phone
+              number.</div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="next-prevoius-buttons">
+        <a href="" class="previous-button" [routerLink]="['/login']">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.50001 10.8333L1.41667 6.00001L5.5 1.16667" stroke="#151515"/>
+              <path d="M3.30597 6L11.4726 6" stroke="#151515"/>
+              </svg>
+          </a>
+        
+            <button class="next-button" [routerLink]="['/terms-and-condition']">Next
+              </button>
+    </div>
+  </div>

@@ -1,0 +1,22 @@
+<!-- src/app/components/bottom-modal/bottom-modal.component.html -->
+<div class="modal-header d-flex justify-content-center">
+    <h4 class="modal-title">No payment method added</h4>
+  </div>
+  <div class="modal-body d-flex flex-column">
+    <span>
+        You won't be able to request a ride 
+        without adding a payment method
+    </span>
+   
+    <div class="button-wrapper">
+        <button class="main-button">   Select payment method  
+        </button>
+        <button class="main-button" [routerLink]="['/home']" (click)="activeModal.close('Close click')">Not now
+        </button>
+    </div>
+
+  </div>
+  <!-- <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="activeModal.close()">Close</button>
+  </div> -->
+  

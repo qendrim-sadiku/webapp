@@ -1,0 +1,26 @@
+<div class="payment-methods">
+    <h4 class="d-flex justify-content-end" [routerLink]="['/home']">Do this later</h4>
+
+    <h2 class="mb-4">Select your preferred
+        payment method</h2>
+
+    <div class="payment-wrapper d-flex justify-content-between align-item-centermt-4" (click)="openBottomModal()">
+        <div class="payment-card d-flex align-item-center">
+            <svg class="me-2" width="26" height="23" viewBox="0 0 26 23" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <rect width="26" height="23" fill="url(#pattern0_1_3693)"/>
+                <defs>
+                <pattern id="pattern0_1_3693" patternContentUnits="objectBoundingBox" width="1" height="1">
+                <use xlink:href="#image0_1_3693" transform="matrix(0.0166667 0 0 0.0188406 0 -0.0652174)"/>
+                </pattern>
+                <image id="image0_1_3693" width="60" height="60" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAFUUlEQVRoBe1aWYhcVRDtcUFExRXBDZSAYlCiiIqgCC4/KorigNvA0HPr1OseBxz9iBDQFlwRwS8/FFFBXAZXxAVFXIIfLjEuHwZRNCqKcWFcMEZiRqq5JWdu3zs9DjPBBy/Q3LpVp+rVqbu+N2m1mn9NBZoKNBVoKtBUoKlAU4GmAjuxAt1u9wgATwD4FcBczX6W89OdTueYRZUskv2pZiQHBkVEfjYuQ0nHkR0IUNMCzCyGcB2ncXaAROSXxRDOOtd0hOcawmkF6jqSpbxTfgP9kmNd9QMEU0VdiZXyTvkN9EuOddUPEEwVdSVWyjvlN9AvOa60XkT+EJEPQghvAHjfbkrL8cwBgqlCVR8QkZM7nc7+/AshnCQijxSS+GpiYuIAxovI8xG7KtG/zDEMF0I4q9fr7ZbmEkI4VlUfZjzJ93Nck1X1VbL37xNpzIG+OYjI3wBm0gt4r9fbJYTwbhpURO7iQAAOAfAXgB9YbzKAz8j/mtSe9lX1TsL7pWhHVVXHZbC3ptgUM9BPHLap6k0Adndg7PuD+21VVae43VoA62Kc9ayfnp7eMxZzTlUfZ1tJzo0agFdyeBG5OMn/v9+0VPVum1btdvtQe4iqXpQE/bzVao14AjYLROSLiLnP9dF3jfuq6tlsA3AqgA0i8ieA30MIL6rqubm1LCIXsK/L8U1v3mC4rdh6Qt6q6r2Tk5MHishDFjAT9DYOpqrnuS+A69gmIpe5raqqI9m2wFqdR0BEPrWium+3293bZWtDCN/5M6xlW1ZmcJRtBFvj4+P72aujPQDAFseJyAkcCMCzbgNwPtt4OajqaWyzNQngE/KdR9T1qjrlfnGJ3OB9a1X1Ocday7aszGCXQwhHGbiqqsMA3KyqL0XbJg4SQjgcwHb3A7CK7bYRkm0d20y2nVpEBMC3hGPis+12ex/3E5ErAbzufWsB3Mi+bMvKDCY5ONimrIg8YzYbMddbC6BHPltHR0d3Tewfk302PQUcC2BfAI8Stk86PQ1sQ7N3Xp7iyZJa2gjbwz2ZSOzBSHi16210AHxNSX7kNmvj6NmGxCO2RVUvYRzJI/ZtivDbfaYZxmTf8blwVVUdTD5LIywi3/NObJcQAPMIpbt3euyIyNGcCMsi8prt0kS2L6rqasep6lNsT2bTFYlts/uxPis7MG1VdQ07ANCk/wL7pNNdRC5ke0beAaDDMW2qAthmWBE5k20ArhaR2+1nx1disy+u/ZnE+qzswEw7zQ58FbQjxqeX+6nq5YxX1bVuW6B9j30AHBSxG1k/TAZwvT9jGNY2Hl5j/8p25y05A7gl9auq6kTGA+ive7ty2s0MwB0A1gPYLCLf2AYUQjiDfVT1WosrIuOsHybbpcbzGYZdiPBvfMX0QKZLD3sb7bGxsb0cY62IvB2T2MD6kgzgePtDgO0fU1NTezguviSstRnDP7u/OybeGWyJLG3T8moBON2Dequql5LdZ8SXbo/tiB0fEXdPYhvo2poMIfxo+HQvsLWbeZ7hruJAdiMzHOuyci6Y6+yaKSLn8C9OSyfq7cYEM+ox7OJvhUtni53ZtjEBeJKwfSJJrA/ZTvJjjFPVN82WJclKCuDJr1S7FcAmAG8BeIdmwLI+j7ll5Z1IeFmJlfLOkmRlybGueuaWletKrJR3liQrS4511TO3rFxXYqW8syRZWXKsq565ZeW6EivlnSXJypr+v47SETfL3LJy8tJdClQLffpOniVsXw9yn0ZLU+b/qre7uH1jy5JMlfFT7MxKXfdWskiWs43sosmm5Jt+U4GmAk0Fmgo0FWgq0FSgqcASK/APNk3aprqJI7UAAAAASUVORK5CYII="/>
+                </defs>
+                </svg>
+            <span>Credit or Debit Card</span>            
+        </div>
+        <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.716746 1.34374L6.17679 6.71669L0.803845 12.1767" stroke="#595959"/>
+            </svg>
+            
+    </div>
+   
+</div>

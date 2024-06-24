@@ -1,0 +1,126 @@
+<!-- login.component.html -->
+
+<div class="phone-number">
+  <h4>Enter your mobile number</h4>
+  <div class="phone-number-content">
+    <ng-select [items]="states" bindLabel="name" bindValue="phoneCode" [clearable]="false" placeholder="Select Prefix"
+      [(ngModel)]="selectedState" 
+      [virtualScroll]="true" (change)="onSelectState($event,selectedState)">
+
+      <!-- Custom label template -->
+      <ng-template ng-label-tmp let-item="item">
+        <div class="label-container">
+          <img [src]="item.image" alt="{{ item.name }} Flag" width="30" height="auto" class="flag-image">
+        </div>
+      </ng-template>
+
+      <!-- Custom option template -->
+      <ng-template ng-option-tmp let-item="item">
+        <div class="option-container">
+          <img [src]="item.image" alt="{{ item.name }} Flag" width="30" height="auto" class="flag-image">
+
+          <div class="phone-code">{{ item.phoneCode }}</div>
+        </div>
+      </ng-template>
+    </ng-select>
+    <!-- Combined phone number input with validation -->
+    <!-- Display selected state -->
+    <div class="selected-state-container">
+      <!-- <div style="margin-top: 10px;">
+  {{ selectedState.name }}
+  </div> -->
+
+      <!-- Inputs for phone code and phone number -->
+      <div class="phone-inputs-container">
+
+
+
+
+        <div class="phone-number-input">
+          <input type="text" id="phoneCode" name="phoneCode" [value]="selectedState" readonly placeholder="+383">
+          <input type="number" id="phoneNumber" name="phoneNumber" [(ngModel)]="phoneNumber" pattern="[0-9]{10}" required placeholder="Mobile Number">
+          <!-- <div *ngIf="phoneNumber && phoneNumber.length < 10" class="text-danger">Please enter a valid 10-digit phone
+            number.</div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="continue-button">Continue <svg width="4" height="15" viewBox="0 0 4 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2.28822 14.7879L1.96792 14.7858C1.52001 14.7828 1.15116 14.6397 0.861357 14.3566C0.57159 14.0682 0.428325 13.6792 0.431561 13.1896C0.434832 12.6948 0.583244 12.3052 0.876798 12.0207C1.17035 11.7361 1.54108 11.5954 1.98899 11.5983L2.30929 11.6004C2.75199 11.6034 3.11823 11.749 3.40799 12.0374C3.69259 12.3205 3.83325 12.7095 3.82998 13.2043C3.82674 13.6939 3.68095 14.0809 3.3926 14.3655C3.09905 14.65 2.73092 14.7908 2.28822 14.7879ZM2.32396 9.38174L2.00365 9.37962C1.55575 9.37666 1.18689 9.2336 0.897092 8.95043C0.607325 8.66205 0.46406 8.27307 0.467296 7.7835C0.470567 7.28872 0.618979 6.89906 0.912533 6.61454C1.20609 6.33002 1.57682 6.18923 2.02472 6.19219L2.34503 6.19431C2.78773 6.19724 3.15396 6.34289 3.44373 6.63127C3.72832 6.91441 3.86898 7.30337 3.86571 7.79815C3.86247 8.28772 3.71668 8.67479 3.42834 8.95934C3.13478 9.24387 2.76666 9.38467 2.32396 9.38174ZM2.35969 3.97561L2.03939 3.97349C1.59148 3.97053 1.22263 3.82747 0.932827 3.54429C0.64306 3.25591 0.499795 2.86694 0.503031 2.37737C0.506302 1.88258 0.654714 1.49293 0.948267 1.20841C1.24182 0.923884 1.61255 0.783102 2.06046 0.786063L2.38076 0.78818C2.82346 0.791106 3.1897 0.936759 3.47946 1.22514C3.76406 1.50828 3.90472 1.89724 3.90145 2.39202C3.89821 2.88159 3.75242 3.26865 3.46407 3.55321C3.17052 3.83774 2.80239 3.97854 2.35969 3.97561Z" fill="#595959"/>
+    </svg>
+    </button>
+</div>
+
+<h6 class="or-heading">or</h6>
+
+<div class="login-buttons">
+  <button class="button"><svg width="16" height="15" viewBox="0 0 54 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g style="mix-blend-mode:darken">
+    <path d="M48.2143 5.25H5.78571V43.75H48.2143V5.25Z" fill="white"/>
+    <path d="M27.2147 17.8365C28.017 17.8365 29.0227 17.3292 29.6216 16.6528C30.1641 16.0398 30.5596 15.1837 30.5596 14.3276C30.5596 14.2114 30.5483 14.0951 30.5257 14C29.6329 14.0317 28.5594 14.5602 27.9153 15.2683C27.4068 15.8073 26.9435 16.6528 26.9435 17.5195C26.9435 17.6463 26.9661 17.7731 26.9774 17.8154C27.0339 17.826 27.1243 17.8365 27.2147 17.8365ZM24.3896 30.625C25.4858 30.625 25.9717 29.938 27.339 29.938C28.7289 29.938 29.034 30.6039 30.2545 30.6039C31.4523 30.6039 32.2546 29.5681 33.0117 28.5535C33.8592 27.3909 34.2095 26.2494 34.2321 26.1966C34.153 26.1755 31.8591 25.2982 31.8591 22.8357C31.8591 20.7007 33.6671 19.739 33.7688 19.665C32.571 18.0585 30.7517 18.0162 30.2545 18.0162C28.9097 18.0162 27.8136 18.7772 27.1243 18.7772C26.3785 18.7772 25.3954 18.0585 24.2314 18.0585C22.0166 18.0585 19.7679 19.7707 19.7679 23.0048C19.7679 25.0129 20.6041 27.1372 21.6324 28.5112C22.5138 29.6738 23.2822 30.625 24.3896 30.625Z" fill="black"/>
+    </g>
+</svg>
+
+    <span> Continue with Apple</span></button>
+  <button class="button"><svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g clip-path="url(#clip0_1_3248)">
+    <path d="M16 7.5C16 3.35786 12.4183 0 8 0C3.58172 0 0 3.35786 0 7.5C0 11.2434 2.92547 14.3462 6.75 14.9089V9.66797H4.71875V7.5H6.75V5.84766C6.75 3.96797 7.94438 2.92969 9.77172 2.92969C10.6467 2.92969 11.5625 3.07617 11.5625 3.07617V4.92188H10.5538C9.56 4.92188 9.25 5.50005 9.25 6.09375V7.5H11.4688L11.1141 9.66797H9.25V14.9089C13.0745 14.3462 16 11.2434 16 7.5Z" fill="#1877F2"/>
+    <path d="M11.1141 9.66797L11.4688 7.5H9.25V6.09375C9.25 5.50063 9.56 4.92188 10.5538 4.92188H11.5625V3.07617C11.5625 3.07617 10.647 2.92969 9.77172 2.92969C7.94438 2.92969 6.75 3.96797 6.75 5.84766V7.5H4.71875V9.66797H6.75V14.9089C7.5783 15.0304 8.4217 15.0304 9.25 14.9089V9.66797H11.1141Z" fill="white"/>
+    </g>
+    <defs>
+    <clipPath id="clip0_1_3248">
+    <rect width="16" height="15" fill="white"/>
+    </clipPath>
+    </defs>
+    </svg>
+   <span> Continue with Facebook</span></button>
+  <button class="button"><svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g clip-path="url(#clip0_1_3261)">
+    <path d="M8.49987 5.72725V8.43816H13.0744C12.8735 9.30998 12.2707 10.0482 11.3667 10.5445L14.1253 12.3073C15.7325 11.0855 16.6598 9.29095 16.6598 7.15914C16.6598 6.66278 16.6057 6.18546 16.5053 5.72733L8.49987 5.72725Z" fill="#4285F4"/>
+    <path d="M3.73623 8.33234L3.11405 8.72456L0.911743 10.1373C2.31038 12.4218 5.17698 14 8.49968 14C10.7946 14 12.7187 13.3764 14.1251 12.3073L11.3665 10.5446C10.6092 10.9645 9.64327 11.2191 8.49968 11.2191C6.28969 11.2191 4.41202 9.99095 3.7397 8.33639L3.73623 8.33234Z" fill="#34A853"/>
+    <path d="M0.911752 3.86273C0.332238 4.80451 0 5.86725 0 6.99996C0 8.13266 0.332238 9.19541 0.911752 10.1372C0.911752 10.1435 3.73998 8.32992 3.73998 8.32992C3.56998 7.90992 3.4695 7.46449 3.4695 6.99989C3.4695 6.53528 3.56998 6.08985 3.73998 5.66985L0.911752 3.86273Z" fill="#FBBC05"/>
+    <path d="M8.49986 2.78727C9.75169 2.78727 10.8644 3.14362 11.753 3.83091L14.1871 1.82639C12.7112 0.69368 10.7949 0 8.49986 0C5.17716 0 2.31038 1.57182 0.911743 3.86273L3.73989 5.67001C4.41212 4.01544 6.28987 2.78727 8.49986 2.78727Z" fill="#EA4335"/>
+    </g>
+    <defs>
+    <clipPath id="clip0_1_3261">
+    <rect width="17" height="14" fill="white"/>
+    </clipPath>
+    </defs>
+    </svg>
+    <span> Continue with Google</span></button>
+  <button class="button"><svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.9073 0.330195C17.9661 0.294673 18 0.24223 18 0.186953C18 0.0837017 17.8839 0 17.7407 0H0.402584C0.180243 0 0 0.129937 0 0.290223C0 0.376502 0.0532504 0.458308 0.145304 0.513447L8.5976 5.57623C8.78179 5.68655 9.04908 5.68611 9.23256 5.57517L17.9073 0.330195ZM0.812017 1.99625C0.48921 1.80289 0 1.96838 0 2.27094V9.64286C0 9.8401 0.221804 10 0.495413 10H17.5046C17.7782 10 18 9.8401 18 9.64286V2.12745C18 1.82413 17.5086 1.65889 17.1862 1.85381L9.28885 6.62877L9.23604 6.6607C9.05256 6.77164 8.78526 6.77208 8.60108 6.66176L8.54806 6.63L0.812017 1.99625Z" fill="#595959"/>
+    </svg>
+    <span>Continue with Email</span>
+    </button>
+</div>
+
+<h6 class="or-heading">or</h6>
+<div class="find-my-contant">
+  <div class="find-account">
+    <svg width="13" height="15" viewBox="0 0 13 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5.30908 12.1357C6.46203 12.1357 7.52523 11.7096 8.39511 10.9995L11.6676 14.7396C11.8194 14.9132 12.0196 15 12.2337 15C12.6824 15 13 14.6055 13 14.1005C13 13.8638 12.931 13.6349 12.7791 13.4692L9.52735 9.74487C10.2108 8.7191 10.6182 7.44871 10.6182 6.06786C10.6182 2.73014 8.22942 0 5.30908 0C2.39565 0 0 2.72225 0 6.06786C0 9.40558 2.38874 12.1357 5.30908 12.1357ZM5.30908 10.8259C3.0308 10.8259 1.14604 8.67175 1.14604 6.06786C1.14604 3.46397 3.0308 1.30984 5.30908 1.30984C7.58736 1.30984 9.47212 3.46397 9.47212 6.06786C9.47212 8.67175 7.58736 10.8259 5.30908 10.8259Z" fill="#3C3C43" fill-opacity="0.6"/>
+      </svg>
+      <span>Find my account</span>      
+  </div>
+  <p>By proceeding, you consent to get calls, 
+    WhatsApp or SMS messages, 
+    including by automated means, 
+    from Adroit and its affiliates to the number provided.</p>
+</div>
+
+
+<div class="prev-and-submit-button">
+  <a href="" class="previous-button" [routerLink]="['/discovery']">
+    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5.50001 10.8333L1.41667 6.00001L5.5 1.16667" stroke="#151515"/>
+      <path d="M3.30597 6L11.4726 6" stroke="#151515"/>
+      </svg>
+  </a>
+
+    <button class="second-continue-button" [routerLink]="['/confirm-phone']">Continue
+      </button>
+
+      <span>This site is protected by reCAPTSHA and 
+        the Google Privacy Policy and Terms of Service apply.</span>
+</div>

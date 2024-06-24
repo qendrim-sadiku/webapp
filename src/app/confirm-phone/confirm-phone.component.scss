@@ -1,0 +1,103 @@
+.phone-number {
+    padding-left: 20px;
+    padding-top: 50px;
+    padding-right: 20px;
+    position: relative;
+    height: 100vh;
+    h4 {
+        font-size: 20px;
+        font-family: Roboto;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14.06px;
+        text-align: left;
+    }
+}
+
+.ng-select {
+    width: 20%;
+}
+
+.label-container,
+.option-container {
+    display: flex;
+    align-items: normal;
+}
+
+.phone-number-content {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+
+
+
+.phone-number-input {
+    padding: 6px 20px;
+    background: #E7E2E2;
+    border-radius: 10px;
+    border: 1px solid #BCC3D1;
+    display: flex;
+
+    input#phoneCode {
+        width: 16%;
+        background: transparent !important;
+        background: transparent !important;
+        outline: none;
+        border: none !important;
+        font-family: Roboto;
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 11.72px;
+        text-align: left;
+
+    }
+
+    input#phoneNumber {
+        width: 70%;
+        background: transparent !important;
+        border: transparent !important;
+        outline: none;
+        font-family: Roboto;
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 11.72px;
+        text-align: left;
+
+    }
+}
+
+.name-surname {
+    display: flex;
+    justify-content: space-between;
+
+    input {
+        padding: 6px 20px;
+        background: #E7E2E2;
+        border-radius: 10px;
+        border: 1px solid #BCC3D1;
+        margin-right: 10px;
+        width: 50%;
+        font-family: Roboto;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 15.23px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.selected-state-container {
+    width: 80%;
+}
+
+.next-prevoius-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    width: 90%;
+    bottom: 50px;
+}

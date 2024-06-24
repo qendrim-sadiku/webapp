@@ -1,0 +1,134 @@
+/* styles.css or styles.scss */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700&display=swap');
+
+
+body {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.ng-select {
+  font-family: Roboto;
+font-size: 10px;
+font-weight: 400;
+width: 20%;
+margin-right: 13px;
+}
+
+
+
+.ng-select.ng-select-single .ng-select-container {
+  height: 29px !important;
+  min-height: 20px !important;
+}
+
+.ng-select.ng-select-single .ng-select-container {
+  background: #D9D9D9 !important;
+  border-radius: 10px !important;
+  text-align: center;
+  border: transparent !important;
+}
+.ng-select.ng-select-single .ng-select-container {
+  background: #D9D9D9 !important;
+  border-radius: 18%;
+  text-align: center;
+  border: transparent !important;
+}
+.ng-arrow-wrapper {
+  display: none !important;
+}
+.ng-select.ng-select-searchable.ng-select.ng-select-single.ng-valid.ng-touched.ng-dirty.ng-select-bottom {
+  background: #D9D9D9;
+  border-radius: 18%;
+  text-align: center;
+  margin-right: 20px;
+  margin-left: 0px;
+  width: 67px !important;
+}
+
+
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option {
+  background: #D9D9D9 !important;
+
+}
+
+.ng-select .ng-select-container .ng-value-container {
+  align-items: center;
+  padding-left: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center !important;
+}
+
+.label-container {
+    .flag-image {
+      width: 21px;
+      height: 15px;
+  }
+}
+
+
+.previous-button {
+  background: #E7E2E2;
+  width: 49px;
+  text-align: center;
+  border-radius: 10px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.next-button {
+  background: #E7E2E2;
+  /* margin-left: 50px; */
+  /* margin-right: 50px; */
+  border: 1px solid #BCC3D1;
+  padding: 5px 23px;
+  border-radius: 10px;
+  margin-bottom: 21px;
+  margin-top: 21px;
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18.75px;
+}
+
+
+/* src/styles.css */
+.bottom-modal .modal-dialog {
+  position: fixed;
+  bottom: 0;
+  margin: 0;
+  width: 100%;
+  animation: slideInUp 0.3s;
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.bottom-modal .modal-content {
+  border-radius: 0;
+}
+
+.modal-backdrop.show {
+  opacity: 0.5;
+}
+
+
+.main-button {
+  background: #E7E2E2;
+  /* width: 50%; */
+  width: 100%;
+  border: 1px solid #BCC3D1;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+}

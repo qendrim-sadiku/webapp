@@ -1,0 +1,224 @@
+.home {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    margin-bottom: 50px;
+    height: 100vh;
+    position: relative;
+
+    .main-input {
+        background: #CCC9C9;
+        border: 1px solid #CCC9C9;
+        border-radius: 8px;
+        margin-bottom: 40px;
+        width: 100%;
+        padding: 6px 22px;
+        font-family: Roboto;
+        font-size: 17px;
+        font-weight: 300;
+        line-height: 22px;
+        letter-spacing: -0.40799999237060547px;
+        text-align: left;
+        text-transform: capitalize;
+        outline: none !important;
+    }
+
+    .search-input {
+        position: relative;
+        button#close-btn {
+            position: absolute;
+            right: 11px;
+            border: none;
+            background: transparent;
+            top: 5px;
+        }
+    }
+
+    .categories {
+
+        .cateogri-item {
+            border: 1px solid #E4E0E0;
+            border-radius: 8px;
+            padding: 10px 17px;
+            display: flex;
+            flex-direction: column;
+
+            /* align-items: center; */
+            svg {
+                height: 70px;
+                width: 70px;
+            }
+
+            h4 {
+                font-family: Inter;
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 12px;
+                letter-spacing: -0.02em;
+                text-align: left;
+                margin-top: 8px;
+                /* margin-left: 10px; */
+                color: #474747;
+                margin-top: 15px;
+            }
+        }
+    }
+
+    .home-banner {
+        margin-top: 40px;
+        margin-bottom: 40px;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.bottom-menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+
+    a {
+        svg {
+            margin-bottom: 10px;
+        }
+
+        color: #888888 !important;
+        font-family: Roboto;
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 11.72px;
+        letter-spacing: -0.23999999463558197px;
+        text-align: center;
+
+        &:first-child {
+            color: #474747 !important;
+
+        }
+    }
+
+}
+
+.menu-item {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.menu-item:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+
+#fullscreen-box {
+    position: absolute;
+    top: 11%;
+    left: 2%;
+    width: 95%;
+    height: 90%;
+    background-color: #fff;
+    z-index: 1000;
+
+    .image {
+        border: 1px solid #E4E0E0;
+        border-radius: 8px;
+        padding: 7px 21px;
+    }
+}
+
+
+.full-categori {
+    .image {
+        border: 1px solid #E4E0E0;
+        border-radius: 8px;
+        padding: 7px 21px;
+
+        svg {
+            height: 50px;
+        }
+    }
+
+    .content {
+        border-bottom: 1px solid #BCC3D1;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 0;
+        margin-bottom: 6px;
+        padding-bottom: 11px;
+
+        h4 {
+            font-family: Inter;
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 15px;
+            /* letter-spacing: -0.02em; */
+            text-align: left;
+            color: #474747;
+        }
+
+        p {
+            font-family: Roboto;
+            font-size: 12px;
+            font-weight: 400;
+            /* line-height: 50px; */
+            text-align: left;
+            margin-bottom: 0 !important;
+            color: #686868;
+        }
+    }
+
+    
+}
+
+.fullscreen-head {
+    h4 {
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 14px;
+        letter-spacing: -0.02em;
+        text-align: center;
+        color: #252525;
+    }
+
+    span {
+        font-family: Roboto;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 15.23px;
+        text-align: left;
+        color: #595959;
+    }
+}
+
+.searchable-items {
+    border-bottom: 1px solid #BCC3D1;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    padding-bottom: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    h3 {
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1;
+        text-align: left;
+    }
+    p {
+        font-family: Roboto;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1;
+        text-align: left;
+    }
+}
